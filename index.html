@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>IT Bootcamp Chat</h1>
+            <h2>Choose a chatroom</h2>
+        </header>
+
+        <nav>
+            <button id="general">#general</button>
+            <button id="js">#js</button>
+            <button id="homework">#homework</button>
+            <button id="tests">#tests</button>
+        </nav>
+
+        <!-- prostor za poruke -->
+        <section>
+            <ul>
+
+            </ul>
+        </section>
+
+        <footer>
+            <div>
+                <input type="text" name="inputMessage" id="inputMessage" placeholder="Your message...">
+                <button id="btnSend" value="send">Send</button>
+            </div>
+            <div>
+                <input type="text" name="inputUsername" id="inputUsername" placeholder="Update username...">
+                <button id="btnUpdate" value="update">Update</button>
+            </div>
+            <p id="newUser"></p>
+        </footer>
+    </div>
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+ 
+ 
+     <script>
+         // Your web app's Firebase configuration
+         const firebaseConfig = {
+             apiKey: "AIzaSyBBN0Nk0llWgP3INkUfR4aQ_6pKSBgg2dc",
+             authDomain: "tirke94-88750.firebaseapp.com",
+             projectId: "tirke94-88750",
+             storageBucket: "tirke94-88750.appspot.com",
+             messagingSenderId: "486843591249",
+             appId: "1:486843591249:web:808a1d4c59bb5a9f9d2670",
+             measurementId: "G-3JFFT9VB24"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         let db = firebase.firestore();
+     </script>
+
+     <script type="module" src="app.js"></script>
+</body>
+
+</html>
